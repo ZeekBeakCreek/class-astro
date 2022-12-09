@@ -6,7 +6,7 @@ export const SITE = {
 };
 
 // Github repo edit link
-export const GITHUB_EDIT_URL = `https://github.com/ZeekBeakCreek/class-site/tree/patch`;
+export const GITHUB_EDIT_URL = `https://github.com/ZeekBeakCreek/class-astro/blob/patch`;
 
 export type Frontmatter = {
 	title: string;
@@ -21,7 +21,7 @@ export type Frontmatter = {
 // multi-language support maybe?
 export const KNOWN_LANGUAGES = {
 	English: 'en',
-	'Español': 'es',
+	Español: 'es',
 } as const;
 
 export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);

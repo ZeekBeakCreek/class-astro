@@ -25,8 +25,6 @@
   --color-yellow: hsl(45.39999999999998, 93.4%, 47.5%);
 
   --color-bg: hsl(0, 0%, 98%);
-  --code-color-bg: #161d27;
-  --code-color-bg-accent: #1b23307e;
 }
 
 :root {
@@ -43,6 +41,9 @@
   --theme-bg-offset: var(--color-light-gray);
   --theme-bg-accent: rgba(145, 144, 151, 0.15);
   --theme-code-bg-accent: rgba(145, 144, 151, 0.15);
+
+  --code-color-bg: rgba(145, 144, 151, 0.15);
+  --code-color-bg-accent: rgba(145, 144, 151, 0.15);
   
   --theme-code-inline-bg: rgba(145, 144, 151, 0.15);
   --theme-code-inline-text: var(--theme-text);
@@ -72,6 +73,9 @@ body {
   --theme-bg-offset: var(--color-light-orange);
   --theme-bg-accent: rgba(255, 123, 29, 0.15);
   --theme-code-bg-accent: rgba(145, 144, 151, 0.15);
+
+  --code-color-bg: #161d27;
+  --code-color-bg-accent: #1b23307e;
 
   --theme-code-inline-bg: var(--color-light-orange);
   --theme-code-inline-text: var(--color-white);
