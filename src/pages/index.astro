@@ -1,0 +1,31 @@
+---
+import "./three-effects/main.css";
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script src="./three-effects/script.js"></script>
+    <title>Astro App </title>
+  </head>
+
+  <body>
+    <div id="info">
+      <div class="grid place-items-center h-screen content-center">
+        <a href="/en/introduction" class="p-4 underline">Filler Pages ...</a>
+      </div>
+    </div>
+    <div id="container"></div>
+  </body>
+</html>
