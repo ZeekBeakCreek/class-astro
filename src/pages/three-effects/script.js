@@ -5,7 +5,9 @@ import { EffectComposer } from "./EffectComposer.js";
 import { RenderPixelatedPass } from "./RenderPixelatedPass.js";
 
 import { GUI } from "./dat.gui.module.js";
-import { CircleGeometry } from "three";
+// import Stats from "three/addons/libs/stats.module.js";
+
+// let stats;
 
 let screenResolution,
   camera,
@@ -87,6 +89,9 @@ function init() {
     });
   gui.add(renderPixelatedPass, "normalEdgeStrength").min(0).max(2).step(0.05);
   gui.add(renderPixelatedPass, "depthEdgeStrength").min(0).max(1).step(0.05);
+
+  // stats = new Stats();
+  // container.appendChild(stats.dom);
 
   const texLoader = new THREE.TextureLoader();
   const tex_checker = pixelTexture(texLoader.load("/textures/checker.png"));
@@ -229,6 +234,7 @@ function animate() {
   // 0.4, 0, 0, Math.PI / 4
   // 0.5, -0.5, -0.5, Math.PI / 4
   composer.render();
+  // stats.update();
 }
 
 // Helper functions
