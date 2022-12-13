@@ -400,7 +400,7 @@ h2.heading {
 
 /* Highlight TOC header link matching the current scroll position */
 .current-header-link {
-	background-color: var(--theme-bg-accent);
+	background-color: var(--code-color-bg);
 	/* Indicates the current heading for forced colors users in older browsers */
 	outline: 1px solid transparent;
 }

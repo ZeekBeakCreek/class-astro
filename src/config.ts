@@ -44,14 +44,13 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Writing JSX', link: 'en/page-2' },
 			{ text: 'React Components', link: 'en/page-3' },
 			{ text: 'Passing Props', link: 'en/page-4' },
-			{ text: 'Conditional Rendering', link: 'en/page-7' },
 		],
 		'Adding Interactivity': [
 			{ text: 'Lifecycle', link: 'en/page-5' },
 			{ text: 'Event Handling', link: 'en/page-6' },
 		],
-		'Managing State': [{ text: 'State in JSX', link: 'en/page-8' }],
-		'React Hooks': [{ text: 'JSX Hooks', link: 'en/page-9' }],
+		'Managing State': [{ text: 'State in JSX', link: 'en/page-7' }],
+		'React Hooks': [{ text: 'JSX Hooks', link: 'en/page-8' }],
 	},
 	es: {
 		'Encabezado de sección': [

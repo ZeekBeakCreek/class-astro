@@ -9,6 +9,11 @@ import { GUI } from "./dat.gui.module.js";
 
 // let stats;
 
+var textureURL =
+  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/17271/lroc_color_poles_1k.jpg";
+var displacementURL =
+  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/17271/ldem_3_8bit.jpg";
+
 let screenResolution,
   camera,
   scene,
@@ -18,7 +23,9 @@ let screenResolution,
   controls,
   // ballGeometry,
   // triangleGeometry,
+  moonGeometry,
   crystalMesh,
+  moon,
   booxGeometry;
 let gui, params;
 
@@ -169,6 +176,32 @@ function init() {
   // ballGeometry.castShadow = true;
   // scene.add(ballGeometry);
 
+  const geom = new THREE.SphereGeometry(radius, 60, 60);
+
+  var textureLoader = new THREE.TextureLoader();
+  var texture = textureLoader.load(textureURL);
+  var displacementMap = textureLoader.load(displacementURL);
+
+  moonGeometry = new THREE.MeshPhongMaterial({
+    color: 0xffffff,
+    map: texture,
+    displacementMap: displacementMap,
+    displacementScale: 0.06,
+    bumpMap: displacementMap,
+    bumpScale: 0.04,
+    reflectivity: 0,
+    shininess: 0,
+  });
+
+  moonGeometry.receiveShadow = true;
+  moonGeometry.castShadow = true;
+
+  moon = new THREE.Mesh(geom, moonGeometry);
+  moon.position.x = 0.5;
+  moon.position.y = 0.8;
+  moon.position.z = 0.5;
+  scene.add(moon);
+
   const geometry = new THREE.BoxGeometry(0.3, 0.3, 0.3);
   booxGeometry = new THREE.Mesh(
     geometry,
@@ -224,7 +257,7 @@ function animate() {
   crystalMesh.position.y = 0.8 + Math.sin(t * 2) * -0.04;
   crystalMesh.rotation.y = stopGoEased(t, 2, 4) * 2 * -Math.PI;
   crystalMesh.position.z = -0.49;
-
+  
   // ballGeometry.material.emissiveIntensity = Math.sin(t * 3) * 0.4 + 0.4;
   // ballGeometry.position.x = -0.48;
   // ballGeometry.position.y = 0.8 + Math.sin(t * 2) * -0.04;
