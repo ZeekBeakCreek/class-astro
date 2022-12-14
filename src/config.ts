@@ -22,6 +22,7 @@ export type Frontmatter = {
 export const KNOWN_LANGUAGES = {
 	English: 'en',
 	Español: 'es',
+	Francais: 'fr',
 } as const;
 
 export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
@@ -52,12 +53,34 @@ export const SIDEBAR: Sidebar = {
 		'Managing State': [{ text: 'State in JSX', link: 'en/page-7' }],
 		'React Hooks': [{ text: 'JSX Hooks', link: 'en/page-8' }],
 	},
+	// translate en to fr
 	es: {
-		'Encabezado de sección': [
+		'Inicio Rápido': [
 			{ text: 'Introducción', link: 'es/introduction' },
-			{ text: 'Página 2', link: 'es/page-2' },
-			{ text: 'Página 3', link: 'es/page-3' },
+			{ text: 'Escribiendo JSX', link: 'es/page-2' },
+			{ text: 'Componentes de React', link: 'es/page-3' },
+			{ text: 'Pasando Props', link: 'es/page-4' },
 		],
-		'Otra sección': [{ text: 'Página 4', link: 'es/page-4' }],
+		'Agregar interactividad': [
+			{ text: 'Ciclo de vida', link: 'es/page-5' },
+			{ text: 'Manejo de eventos', link: 'es/page-6' },
+		],
+		'Manejando Estado': [{ text: 'Estado en JSX', link: 'es/page-7' }],
+		'React Hooks': [{ text: 'Hooks JSX', link: 'es/page-8' }],
+	},
+	// translate en to fr 
+	fr: {
+		'Démarrage rapide': [
+			{ text: 'Introduction', link: 'fr/introduction' },
+			{ text: 'Écrire du JSX', link: 'fr/page-2' },
+			{ text: 'Composants React', link: 'fr/page-3' },
+			{ text: 'Passer des props', link: 'fr/page-4' },
+		],
+		'Ajouter de l\'interactivité': [
+			{ text: 'Cycle de vie', link: 'fr/page-5' },
+			{ text: 'Gestion des événements', link: 'fr/page-6' },
+		],
+		'Gérer l\'état': [{ text: 'État dans le JSX', link: 'fr/page-7' }],
+		'React Hooks': [{ text: 'Hooks JSX', link: 'fr/page-8' }],
 	},
 };

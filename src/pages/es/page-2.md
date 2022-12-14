@@ -1,51 +1,78 @@
 ---
-title: Page 2
-description: React Hooks - 2
+title: React Syntax
+description: React Syntax - 2
 layout: ../../layouts/MainLayout.astro
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## *Writing JSX*
 
-Sed flavum. Stridore nato, Alcandrumque desint ostendit derat, longoque, eadem
-iunxit miserum pedum pectora. Liberat sine pignus cupit, ferit mihi venias
-amores, et quod, maduere haec _gravi_ contentusque heros. Qui suae attonitas.
+JSX is a syntax extension for JavaScript that lets you write HTML-like markup inside a JavaScript file. Although there are other ways to write components, most React developers prefer the conciseness of JSX, and most codebases use it.
 
-_Acta caelo_ ego, hoc illi ferroque, qui fluitque Achillis deiecerat erat
-inhospita arasque ad sume et aquis summo. Fugerat ipse iam. Funeris Iuno Danaos
-est inroravere aurum foret nati aeque tetigisset! Esse ad tibi queritur [Sol sub
-est](http://iusserat.net/) pugno solitoque movet coercuit solent caput te?
+JSX: Putting markup into JavaScript 
+The Web has been built on HTML, CSS, and JavaScript. For many years, web developers kept content in HTML, design in CSS, and logic in JavaScript—often in separate files! Content was marked up inside HTML while the page’s logic lived separately in JavaScript:
 
-Crescit sint petit gemellos gemino, et _gemma deus sub_ Surrentino frena
-principiis statione. Soporiferam secunda nulli Tereus is _Aeolidae cepit_, tua
-peregrinosque illam parvis, deerit sub et times sedant.
+```html 
+<!-- index.html -->
+<div>
+    <h1>My non-React App</h1>
+    <form></form>
+<div>
 
-## Apium haec candida mea movebo obsuntque descendat
+``` 
+```js
+// index.js
+isLoggedIn() {...}
+onClick() {...}
+onSubmit() {...}
+```
 
-Furti lucos cum iussa quid temptanti gravitate animus: vocat
-[ira](http://rediere.com/): illa. Primis aeternus, illi cinguntur ad mugitus
-aevo repentinos nec.
+But as the Web became more interactive, logic increasingly determined content. JavaScript was in charge of the HTML! This is why in React, rendering logic and markup live together in the same place—components.
 
-Transcurrere tenens in _litore_ tuti plebe circumspicit viventi quoque mox
-troades medio mea locuta gradus perque sic unguibus
-[gramen](http://quantoque.io/). Effetus celerique nomina quoque. Ire gemino est.
-Eurus quaerenti: et lacus, tibi ignorant tertia omnes subscribi ducentem sedit
-experientia sine ludunt multae. Ponderis memor purasque, ut armenta corpora
-efferre: praeterea infantem in virgam verso.
+```jsx
+// Form.js React component
+Form() {
+    onClick() {...}
+    onSubmit() {...}
 
-- Revellit quoniam vulnerat dique respicit
-- Modo illis
-- Nec victoria quodque
-- Spectans si vitis iussorum corpora quas
+    <form onSubmit>
+    <input onClick/>
+    <input onClick/>
+    </form>
+}
+```
+Each React component is a JavaScript function that may contain some markup that React renders into the browser. React components use a syntax extension called JSX to represent that markup. JSX looks a lot like HTML, but it is a bit stricter and can display dynamic information. The best way to understand this is to convert some HTML markup to JSX markup.
 
-Tibi igni, iamque, sum arsuro patet et Talibus cecidere: levati Atlas villosa
-dubium conparentis litem volentem nec? Iuga tenent, passi cumque generosior
-luminis, quique mea aequora ingens bracchia furor, respiramen eram: in. Caelebs
-et passu Phaethonta alumna orbem rapuit inplet [adfusaeque
-oculis](http://www.virum.net/ille-miserae.html) paene. Casus mea cingebant idque
-suis nymphe ut arae potuit et non, inmota erat foret, facta manu arvum.
+**_~JSX and React are the same thing~_**
 
-Fugam nec stridentemque undis te solet mentemque Phrygibus fulvae adhuc quam
-cernimus est! Aper iube dederat adsere iamque mortale ita cornua si fundamina
-quem caperet, iubeas stolidae pedesque intrarunt navigat triformis. Undas terque
-digitos satis in nautae sternuntur curam, iaculum ignoscere _pianda dominique
-nostra_ vivacemque teneraque!
+JSX and React are _**two separate things**_. They’re often used together, but you can use them independently of each other. _**JSX is a syntax extension**_, while _**React is a JavaScript library**_.
+
+## _JSX Rules_
+
+***There are three absolute rules to know when writing JSX***
+
+1. Return a single root element
+2. Close all the tags
+3. camelCase ~all~ most of the things!
+
+**Finished Result**
+
+```jsx
+export default function TodoList() {
+  return (
+    <>
+      <h1>Hedy Lamarr's Todos</h1>
+      <img 
+        src="https://i.imgur.com/yXOvdOSs.jpg" 
+        alt="Hedy Lamarr" 
+        className="photo" 
+      />
+      <ul>
+        <li>Invent new traffic lights</li>
+        <li>Rehearse a movie scene</li>
+        <li>Improve the spectrum technology</li>
+      </ul>
+    </>
+  );
+```
+
+Dont worry if you dont get it yet! Most of the times, React’s on-screen error messages will help you find where the problem is. Give them a read if you get stuck!
