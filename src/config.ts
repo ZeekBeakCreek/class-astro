@@ -6,7 +6,7 @@ export const SITE = {
 };
 
 // Github repo edit link
-export const GITHUB_EDIT_URL = `https://github.com/ZeekBeakCreek/class-astro/blob/patch`;
+export const GITHUB_EDIT_URL = `https://github.com/ZeekBeakCreek/class-astro/blob/master`;
 
 export type Frontmatter = {
 	title: string;
@@ -21,8 +21,9 @@ export type Frontmatter = {
 // multi-language support maybe?
 export const KNOWN_LANGUAGES = {
 	English: 'en',
-	Español: 'es',
-	Francais: 'fr',
+	Spanish: 'es',
+	French: 'fr',
+	japanese: 'jp',
 } as const;
 
 export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
@@ -53,7 +54,6 @@ export const SIDEBAR: Sidebar = {
 		'Managing State': [{ text: 'State in JSX', link: 'en/page-7' }],
 		'React Hooks': [{ text: 'JSX Hooks', link: 'en/page-8' }],
 	},
-	// translate en to fr
 	es: {
 		'Inicio Rápido': [
 			{ text: 'Introducción', link: 'es/introduction' },
@@ -68,7 +68,6 @@ export const SIDEBAR: Sidebar = {
 		'Manejando Estado': [{ text: 'Estado en JSX', link: 'es/page-7' }],
 		'React Hooks': [{ text: 'Hooks JSX', link: 'es/page-8' }],
 	},
-	// translate en to fr 
 	fr: {
 		'Démarrage rapide': [
 			{ text: 'Introduction', link: 'fr/introduction' },
@@ -82,5 +81,19 @@ export const SIDEBAR: Sidebar = {
 		],
 		'Gérer l\'état': [{ text: 'État dans le JSX', link: 'fr/page-7' }],
 		'React Hooks': [{ text: 'Hooks JSX', link: 'fr/page-8' }],
+	},
+	jp: {
+		'クイックスタート': [
+			{ text: 'はじめに', link: 'jp/introduction' },
+			{ text: 'JSXを書く', link: 'jp/page-2' },
+			{ text: 'Reactコンポーネント', link: 'jp/page-3' },
+			{ text: 'Propsを渡す', link: 'jp/page-4' },
+		],
+		'インタラクティブを追加する': [
+			{ text: 'ライフサイクル', link: 'jp/page-5' },
+			{ text: 'イベントハンドリング', link: 'jp/page-6' },
+		],
+		'状態を管理する': [{ text: 'JSXの状態', link: 'jp/page-7' }],
+		'React Hooks': [{ text: 'JSX Hooks', link: 'jp/page-8' }],
 	},
 };
