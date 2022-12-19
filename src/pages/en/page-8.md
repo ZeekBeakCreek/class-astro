@@ -64,7 +64,7 @@ The only argument to the `useState()` Hook is the initial state. Unlike with cla
 
 ### What does `useState` return?
 
-It returns a pair of values: the current state and a function that updates it. This is why we write `const [count, setCount] = useState()`. This is similar to `this.state.count` and `this.setState` in a class, except you get them in a pair. If you're not familiar with the syntax we used, we'll come back to it [at the bottom of this page](#tip-what-do-square-brackets-mean).
+It returns a pair of values: the current state and a function that updates it. This is why we write `const [count, setCount] = useState()`. This is similar to `this.state.count` and `this.setState` in a class, except you get them in a pair. If you're not familiar with the syntax we used, we'll come back to it [just below this section](#using-the-state-hook).
 
 Now that we know what the `useState` Hook does, our example should make more sense:
 
@@ -92,7 +92,7 @@ function Counter() {
 
 > When you declare a state variable with `useState()`, it returns a pair — an array with two items. The first item is the current value, and the second is a function that lets you update it. You can call this function from an event handler or somewhere else. It's similar to `this.setState` in a class, except it doesn't merge the old and new state together. (We'll show an example comparing `useState()` to `this.state` in [Using the State Hook](#using-the-state-hook).)
 
-> If you're not familiar with the syntax we used for declaring a state variable with `useState()`, we'll come back to it [at the bottom of this page](#tip-what-do-square-brackets-mean).
+> If you're still not familiar with the syntax we used for declaring a state variable with `useState()`, we'll [go back](#using-the-state-hook) to it if necessary.
 
 ### Tip: What do Square Brackets Mean?
 

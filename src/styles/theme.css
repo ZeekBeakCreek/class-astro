@@ -51,7 +51,7 @@
   --theme-code-text: var(--color-gray);
   --theme-navbar-bg: var(--color-white);
   --theme-selection-color: var(--color-black);
-  --theme-selection-bg: var(--color-light-gray);
+  --theme-selection-bg: var(--color-purple);
 }
 
 body {
@@ -70,8 +70,8 @@ body {
   --theme-text-lighter: var(--color-gray);
   --theme-bg: #0A0A0A;
   --theme-bg-hover: var(--code-color-bg);
-  --theme-bg-offset: var(--color-light-orange);
-  --theme-bg-accent: rgba(255, 123, 29, 0.15);
+  --theme-bg-offset: #0d1117;
+  --theme-bg-accent: rgba(111, 125, 38, 0.15);
   --theme-code-bg-accent: rgba(145, 144, 151, 0.15);
 
   --code-color-bg: #161d27;
